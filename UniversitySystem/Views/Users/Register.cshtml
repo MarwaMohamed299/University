@@ -1,0 +1,26 @@
+﻿@using UniversitySystem.Dtos;
+@model RegisterDto
+
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <input class="form-control" asp-for="UserName" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input class="form-control" asp-for="Password" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+
+    <button class="btn btn-primary">Submit</button>
+
+</form>
